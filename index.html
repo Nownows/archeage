@@ -82,7 +82,7 @@
 		return this._div;
 	};
 
-var cmAttr = '&copy База знаний Archeage.org.ua', cmUrl = './images/{z}/{x}/{y}.jpg'; var minimal   = L.tileLayer(cmUrl, {attribution:'<a href="http://aadb.info/doc/" target=_new>руководство</a>',minZoom:1,maxZoom:7,noWrap:true,tms: true});
+var cmAttr = '&copy База знаний Archeage.org.ua', cmUrl = './images/maps/{z}/{x}/{y}.jpg'; var minimal   = L.tileLayer(cmUrl, {attribution:'<a href="http://aadb.info/doc/" target=_new>руководство</a>',minZoom:1,maxZoom:7,noWrap:true,tms: true});
 var map = L.map('map', {center: [-68, -90],zoomControl:false , zoom: 3, layers: [minimal]});
 	UserCoord.addTo(map);
 		
