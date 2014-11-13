@@ -42,11 +42,8 @@
 		<div class="editor" id="editor" name="editor"></div>
 
 					<div id="logo" style="position:fixed; left:0px; top:5px; width:220px; height:114px; z-index:20;"><a href="http://aadb.info/" target=_new><img src="./images/aadb_logo.png" width="218" height="119" border="0"></a></div>
-								<div id="custom menu" style="position: absolute;z-index: 30;right: 0px;top: 0px;background: url('./images/paper.png');background-repeat: no-repeat;padding: 25px 11px;width: 240px;height: 387px;"></div>
-
-								<div class="googleBanner">
-									</div>
-												<div id="DrawBtn" class="DrawBtn" onClick="CheckEdit()" style="position:fixed; left:10px; top:160px;"><div class="block" style="margin: 6px 0px 0px 6px;" title="Нанести метки на карту"><img src="http://www.aadb.info/map/images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div></div>
+					<div id="custom menu" style="position: absolute;z-index: 30;right: 0px;top: 0px;background: url('./images/paper.png');background-repeat: no-repeat;padding: 25px 11px;width: 240px;height: 387px;"></div>
+					<div id="DrawBtn" class="DrawBtn" onClick="CheckEdit()" style="position:fixed; left:10px; top:160px;"><div class="block" style="margin: 6px 0px 0px 6px;" title="Нанести метки на карту"><img src="http://www.aadb.info/map/images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div></div>
 					<div id="map"></div>
 
 		
@@ -69,7 +66,7 @@
 
 	UserCoord.onAdd = function (map) {
 		this._div = L.DomUtil.create('div', 'UserCoord');
-		this._div.innerHTML = '<div style="padding-top: 25px;text-align: left; width: 230px;font-family: Marck Script; font-size: 25px;"><select name="we" id="we" class="coords-slct"><option id="1" value="-1">W</option><option id="2" value="1">E</option></select> <input type="text" name="r1" id="r1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">° <input type="text" name="m1" id="m1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&rsquo; <input type="text" name="s1" id="s1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&quot; <br><select name="ns" id="ns" class="coords-slct"><option value="1">S</option><option value="-1">N</option></select> <input type="text" name="r2" id="r2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">° <input type="text" name="m2" id="m2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&rsquo; <input type="text" name="s2" id="s2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&quot;<div id="create" class="crtmrk_btn" onClick="DropMarker()">Put a marker</div></div>'
+		this._div.innerHTML = '<div style="padding-top: 25px;text-align: left; width: 230px;font-family: Marck Script; font-size: 25px;"><select name="we" id="we" class="coords-slct"><option id="1" value="-1">W</option><option id="2" value="1">E</option></select> <input type="text" name="r1" id="r1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">° <input type="text" name="m1" id="m1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&rsquo; <input type="text" name="s1" id="s1" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&quot; <br><select name="ns" id="ns" class="coords-slct"><option value="1">S</option><option value="-1">N</option></select> <input type="text" name="r2" id="r2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">° <input type="text" name="m2" id="m2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&rsquo; <input type="text" name="s2" id="s2" maxlength="2" value="0" class="coords-inpt" onclick="this.select();">&quot;<div id="create" class="crtmrk_btn" onClick="DropMarker()">Placer un marqueur</div></div>'
 		return this._div;
 	};
 	
