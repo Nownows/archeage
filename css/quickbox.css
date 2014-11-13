@@ -1,0 +1,142 @@
+#sshow_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: black;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+	opacity: 0.85;
+	text-align: center;
+	display: none;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+#sshow {
+	position: absolute;
+	z-index: 10000;
+	top: 10%;
+	text-align: center;
+	margin: 0 0 0 35%;
+	width: 30%;
+	padding: 0 auto;
+}
+
+#sshow #sshow_wrap {
+	background: #fafafa;
+	position: relative;
+	margin: 0px auto;
+	box-shadow: 2px 2px 10px #000;
+	border-radius: 6px;
+}
+#sshow #sshow_wrap #sshow_inside {
+	padding: 10px;
+	min-height: 200px;
+}
+
+#sshow_img {
+	margin: 0;
+}
+
+#sshow_img img {
+	border: 1px solid #eaeaea;
+	box-shadow: 0 1px 0 #fff;
+	cursor: pointer;
+}
+
+#sshow_art {
+	margin: 0;
+}
+
+#sshow_dscr p {
+	display: inline;
+}
+
+#sshow_dscr {
+	text-align: left;
+	padding: 0 10px 15px 15px;
+	color: #555;
+}
+
+#sshow_top {
+	text-align: left;
+	padding: 0 0 5px 15px;
+	color: #555;
+}
+
+#sshow_close {
+	padding: 15px 15px 0 0;
+	text-align: right;
+	float: right;
+	width: 90px;
+	cursor: pointer;
+	color: #bcbcbc;
+}
+
+#sshow_close u {
+	color: darkred;
+	text-decoration: underline;
+}
+
+#sshow_imglist {
+	color: #555;
+	padding: 15px 0 3px 0;
+	margin-right: 120px;
+}
+
+#sshow_imglist p {
+	padding: 0;
+	margin: 0 7px 0 0;
+	float: left;
+	height: 20px;
+}
+
+#sshow_imgs {
+	display: block;
+}
+
+#sshow_imgs a {
+	font-weight: normal;
+	float: left;
+	padding: 3px 7px;
+	background: #eee;
+	text-decoration: none;
+	margin: 0 3px 5px 3px;
+	color: #555;
+	text-shadow: 0 1px #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 #ccc;
+}
+
+#sshow_imgs a.sshow_act {
+	background: #ddd;
+	box-shadow: 0 1px 0 #bbb;
+}
+
+#sshow_left, #sshow_right {
+	width: 20px;
+	margin: 0px 10px 0 0px;
+	float: right;
+	text-shadow: 1px 0 #fff;
+	cursor: pointer;
+	text-align: center;
+	color: darkred;
+	font: normal 15px "Times New Roman";
+}
+
+#sshow_left {
+	border-left: 1px solid #eaeaea;
+	padding-left: 15px;
+}
+
+#sshow_ct {
+	color: #bcbcbc;
+	float: right;
+	padding: 1px 5px 0 0;
+}
+
+.clear {
+	display: block;
+	clear: both;
+}
