@@ -10,17 +10,17 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://aadb.info/map/css/Leaflet.Coordinates-0.1.3.css" />
-		<link rel="stylesheet" href="http://aadb.info/map/css/leaflet.css" />
-		<link rel="stylesheet" href="http://aadb.info/map/css/leaflet.draw.css" type="text/css" />
-		<link rel="stylesheet" href="http://aadb.info/map/css/quickbox.css" type="text/css" />	
-		<link rel="stylesheet" href="http://aadb.info/map/css/style.css" type="text/css" />	
+		<link rel="stylesheet" href="./css/Leaflet.Coordinates-0.1.3.css" />
+		<link rel="stylesheet" href="./css/leaflet.css" />
+		<link rel="stylesheet" href="./css/leaflet.draw.css" type="text/css" />
+		<link rel="stylesheet" href="./css/quickbox.css" type="text/css" />	
+		<link rel="stylesheet" href="./css/style.css" type="text/css" />	
 
-		<script type="text/javascript" src="http://aadb.info/map/js/leaflet.js"></script>
-		<script type="text/javascript" src="http://aadb.info/map/js/Leaflet.Coordinates-0.1.3.min.js"></script>
-		<script type="text/javascript" src="http://aadb.info/map/js/leaflet.draw.js"></script>
-		<script type="text/javascript" src="http://aadb.info/map/js/jquery.min.js"></script>
-		<script type="text/javascript" src="http://aadb.info/map/js/quickbox.js"></script>
+		<script type="text/javascript" src="./js/leaflet.js"></script>
+		<script type="text/javascript" src="./js/Leaflet.Coordinates-0.1.3.min.js"></script>
+		<script type="text/javascript" src="./js/leaflet.draw.js"></script>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/quickbox.js"></script>
 
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="css/leaflet.ie.css" />
@@ -59,14 +59,14 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 		<div class="results" id="results" name="results"></div>
 		<div class="editor" id="editor" name="editor"></div>
 
-					<div id="logo" style="position:fixed; left:0px; top:5px; width:220px; height:114px; z-index:20;"><a href="http://aadb.info/" target=_new><img src="../images/aadb_logo.png" width="218" height="119" border="0"></a></div>
+					<div id="logo" style="position:fixed; left:0px; top:5px; width:220px; height:114px; z-index:20;"><a href="http://aadb.info/" target=_new><img src="http://www.aadb.info/images/aadb_logo.png" width="218" height="119" border="0"></a></div>
 								<div id="custom menu" style="position: absolute;z-index: 30;right: 0px;top: 0px;background: url('images/paper.png');background-repeat: no-repeat;padding: 25px 11px;width: 240px;height: 387px;"></div>
 
 								<div class="googleBanner">
 									</div>
-												<div id="DrawBtn" class="DrawBtn" onClick="CheckEdit()" style="position:fixed; left:10px; top:160px;"><div class="block" style="margin: 6px 0px 0px 6px;" title="Нанести метки на карту"><img src="images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div></div>
+												<div id="DrawBtn" class="DrawBtn" onClick="CheckEdit()" style="position:fixed; left:10px; top:160px;"><div class="block" style="margin: 6px 0px 0px 6px;" title="Нанести метки на карту"><img src="http://www.aadb.info/map/images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div></div>
 				<div id="DrawBtn" class="DrawBtn" onClick="CheckLang()" style="position:fixed; left:10px; top:120px;">
-											<a href="?lang=ru"><div style="margin: 8px 0px 0px 12px;"><img src="../images/lang_ru.jpg" height="20"></div></a>
+											<a href="?lang=ru"><div style="margin: 8px 0px 0px 12px;"><img src="http://www.aadb.info/images/lang_ru.jpg" height="20"></div></a>
 									</div>
 					<div id="map"></div>
 
@@ -358,7 +358,7 @@ var map = L.map('map', {center: [-68, -90],zoomControl:false , zoom: 3, layers: 
 			
 			var MarkerArrayList = new Array;
 			function CheckEdit(){
-				if (MapClicker == 1) {editsSwitch = 0; document.getElementById('map').style.cursor = ''; document.getElementById('DrawBtn').innerHTML = '<div class="block" style="margin: 6px 0px 0px 6px;" title="Закончить редактирование"><img src="images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div>';}
+				if (MapClicker == 1) {editsSwitch = 0; document.getElementById('map').style.cursor = ''; document.getElementById('DrawBtn').innerHTML = '<div class="block" style="margin: 6px 0px 0px 6px;" title="Закончить редактирование"><img src="/map/images/icons/edit_ico.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">&nbsp; M</div>';}
 				else {editsSwitch = 1; document.getElementById('map').style.cursor = 'url("mouse_target.cur"), auto'; document.getElementById('DrawBtn').innerHTML = '<div class="block" style="margin: 6px 0px 0px 6px;" title="Начать редактирование"><img src="images/icons/edit_ico_end.png" width="24" height="24" border="0"></div><div class="block mapButtonLetter">esc</div>';}
 				MapClicker = editsSwitch;
 			}
@@ -464,8 +464,8 @@ var map = L.map('map', {center: [-68, -90],zoomControl:false , zoom: 3, layers: 
 
 			
 			function OpenEditor(elementid){			
-				if (document.getElementById('gmllnk'+elementid).value == "") {image_link = "images/no_mini_img.png";} else {image_link = document.getElementById('gmllnk'+elementid).value;}
-				document.getElementById('editor').innerHTML = "<div class='bckgr_shdw'><div class='pl_marker_edit'><div class='close_wnd'><img src='images/cancel.png' onClick='CloseEditor()'></div>Edit the marker:<br><br><textarea id='editorfield' name='editorfield' style='resize:none;width:290px;height:100px;font-family:\"Roboto Condensed\", Arial;font-size:12px;'></textarea><div>Icon: <div class='block link' onClick='ChangeIcon("+elementid+", 1)'><img src='images/icons/p"+elementid+".png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 2)'><img src='images/icons/user_icon_1.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 3)'><img src='images/icons/user_icon_2.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 4)'><img src='images/icons/user_icon_3.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 5)'><img src='images/icons/user_icon_4.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 6)'><img src='images/icons/user_icon_5.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 7)'><img src='images/icons/user_icon_6.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 8)'><img src='images/icons/user_icon_7.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 9)'><img src='images/icons/user_icon_8.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 10)'><img src='images/icons/user_icon_9.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 11)'><img src='images/icons/user_icon_10.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 12)'><img src='images/icons/user_icon_11.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 13)'><img src='images/icons/user_icon_12.png'></div></div><div>URL-path for marker image:<br><input type='text' id='editorlink' name='editorlink' class='txtfld_editor_imgurl'><img src='"+image_link+"' width='100' height='61' style='float:left;margin-right:10px;'></div><div class='crtmrk_btn' style='float: right;padding-right: 55px;' onClick='SaveToField("+elementid+")'>Save</div></div></div>";
+				if (document.getElementById('gmllnk'+elementid).value == "") {image_link = "http://www.aadb.info/images/no_mini_img.png";} else {image_link = document.getElementById('gmllnk'+elementid).value;}
+				document.getElementById('editor').innerHTML = "<div class='bckgr_shdw'><div class='pl_marker_edit'><div class='close_wnd'><img src='http://www.aadb.info/images/cancel.png' onClick='CloseEditor()'></div>Edit the marker:<br><br><textarea id='editorfield' name='editorfield' style='resize:none;width:290px;height:100px;font-family:\"Roboto Condensed\", Arial;font-size:12px;'></textarea><div>Icon: <div class='block link' onClick='ChangeIcon("+elementid+", 1)'><img src='images/icons/p"+elementid+".png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 2)'><img src='images/icons/user_icon_1.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 3)'><img src='images/icons/user_icon_2.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 4)'><img src='images/icons/user_icon_3.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 5)'><img src='images/icons/user_icon_4.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 6)'><img src='images/icons/user_icon_5.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 7)'><img src='images/icons/user_icon_6.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 8)'><img src='images/icons/user_icon_7.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 9)'><img src='images/icons/user_icon_8.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 10)'><img src='images/icons/user_icon_9.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 11)'><img src='images/icons/user_icon_10.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 12)'><img src='images/icons/user_icon_11.png'></div><div class='block link' onClick='ChangeIcon("+elementid+", 13)'><img src='http://www.aadb.info/images/icons/user_icon_12.png'></div></div><div>URL-path for marker image:<br><input type='text' id='editorlink' name='editorlink' class='txtfld_editor_imgurl'><img src='"+image_link+"' width='100' height='61' style='float:left;margin-right:10px;'></div><div class='crtmrk_btn' style='float: right;padding-right: 55px;' onClick='SaveToField("+elementid+")'>Save</div></div></div>";
 				
 				
 				
