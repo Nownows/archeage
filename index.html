@@ -60,17 +60,9 @@
 
 		var some_text = "";
 		
-		var publicFarmLayer = new L.LayerGroup();
-		var dungeon = new L.LayerGroup();
-		var outdoors = new L.LayerGroup();
 		var locations = new L.LayerGroup();
 		var pvplayer = new L.LayerGroup();
 				
-		var overlays2 = {
-			"Portals": dungeon,
-		//	"Оутдоры": outdoors
-		//	"Общественные фермы": publicFarmLayer
-		};
 	var UserCoord = L.control();	
 	var Line = L.control();
 	var Empty = L.control();
@@ -93,17 +85,9 @@
 		return this._div;
 	};
 
-L.marker([-75.08, -117.15], {icon: dungeonIcon, title: 'Копи Пронизывающего Ветра'}).bindPopup('Копи Пронизывающего Ветра').addTo(dungeon);
-L.marker([-75.68, -95.33], {icon: dungeonIcon, title: 'Арсенал Сожженной Крепости'}).bindPopup('Арсенал Сожженной Крепости').addTo(dungeon);
-L.marker([-80.03, -77.85], {icon: dungeonIcon, title: 'Подземелье Аль-Харбы'}).bindPopup('Подземелье Аль-Харбы').addTo(dungeon);
-L.marker([-75.50, -73.73], {icon: dungeonIcon, title: 'Ферма Хадира'}).bindPopup('Ферма Хадира').addTo(dungeon);
-
 var cmAttr = '&copy База знаний Archeage.org.ua', cmUrl = 'http://www.aadb.info/images/map/world/en/{z}/{x}/{y}.jpg'; var minimal   = L.tileLayer(cmUrl, {attribution:'<a href="http://aadb.info/doc/" target=_new>руководство</a>',minZoom:1,maxZoom:7,noWrap:true,tms: true});
 var map = L.map('map', {center: [-68, -90],zoomControl:false , zoom: 3, layers: [minimal]});
 	UserCoord.addTo(map);
-	some_text = "Transport and locations";
-	Line.addTo(map);
-	L.control.layers({},overlays2).addTo(map);
 		
 </script>
 		
